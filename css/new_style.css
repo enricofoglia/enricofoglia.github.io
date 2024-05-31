@@ -6,7 +6,7 @@ body {
 }
 
 .banner {
-    background-image: url('../images/von_karman_vortices.png'); /* Path to your banner image */
+    background-image: url('../images/banner.jpg'); /* Path to your banner image */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
