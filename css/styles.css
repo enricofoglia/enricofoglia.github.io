@@ -6,10 +6,18 @@ body {
 }
 
 .banner {
-    background-color: #333;
+    background-image: url('../images/von_karman_vortices.png'); /* Path to your banner image */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 300px;
     color: white;
-    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
+    position: relative;
 }
 
 nav ul {
