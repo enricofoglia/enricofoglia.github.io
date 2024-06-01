@@ -11,7 +11,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 300px;
+    height: 500px;
     color: white;
     display: flex;
     justify-content: center;
@@ -63,4 +63,40 @@ section {
     display: flex;
     justify-content: space-between; /* Space between title and photo */
     align-items: center;
+}
+
+.contact-container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.contact-info {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.contact-info p {
+    margin: 10px 0;
+}
+
+.contact-info a {
+    color: #1a73e8;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+strong {
+    color: #333;
 }
