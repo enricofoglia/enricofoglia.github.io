@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', (event) => {
             event.preventDefault();
             const targetId = link.getAttribute('href').substring(1);
-            if (targetId === 'cv') {
+            if (targetId === 'files/cv_US.pdf') {
                 // Open PDF file
-                window.open('path_to_your_cv.pdf', '_blank');
+                window.open('files/cv_US.pdf', '_blank');
             } else {
                 document.querySelectorAll('section').forEach(section => {
                     if (section.id === targetId) {
