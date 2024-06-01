@@ -11,13 +11,18 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', (event) => {
             event.preventDefault();
             const targetId = link.getAttribute('href').substring(1);
-            document.querySelectorAll('section').forEach(section => {
-                if (section.id === targetId) {
-                    section.classList.remove('hidden');
-                } else {
-                    section.classList.add('hidden');
-                }
-            });
+            if (targetId === 'cv') {
+                // Open PDF file
+                window.open('path_to_your_cv.pdf', '_blank');
+            } else {
+                document.querySelectorAll('section').forEach(section => {
+                    if (section.id === targetId) {
+                        section.classList.remove('hidden');
+                    } else {
+                        section.classList.add('hidden');
+                    }
+                });
+            }
         });
     });
 });
