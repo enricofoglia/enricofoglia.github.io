@@ -46,8 +46,13 @@ nav ul li a:hover {
 
 section {
     padding: 1rem;
-    margin: 1rem;
-    max-width: 800px; /* Maximum width for the section */
+    margin: 1rem auto;
+    max-width: 1024px; /* Maximum width for the section */
+}
+
+section a {
+    color: #1a73e8;
+    text-decoration: none;
 }
 
 .profile-photo {
@@ -64,6 +69,7 @@ section {
     display: flex;
     justify-content: space-between; /* Space between title and photo */
     align-items: center;
+    flex-wrap: wrap; /* Allows wrapping on smaller screens */
 }
 
 .contact-container {
@@ -101,3 +107,4 @@ h1 {
 strong {
     color: #333;
 }
+
