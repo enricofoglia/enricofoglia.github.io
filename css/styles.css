@@ -11,7 +11,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 500px;
+    height: 300px;
     color: white;
     display: flex;
     justify-content: center;
@@ -47,6 +47,7 @@ nav ul li a:hover {
 section {
     padding: 1rem;
     margin: 1rem;
+    max-width: 800px; /* Maximum width for the section */
 }
 
 .profile-photo {
@@ -76,7 +77,7 @@ section {
 
 h1 {
     text-align: center;
-    color: #333;
+    color: #ebe9e8;
 }
 
 .contact-info {
