@@ -84,6 +84,7 @@ section a {
 .cv-pdf embed {
             width: 100%;
             max-width: 1024px;
+            height: 80vh; /* Adjust height as needed */
             border: 1px solid #ccc;
 }
 
