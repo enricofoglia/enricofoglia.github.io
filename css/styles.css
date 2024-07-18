@@ -48,6 +48,8 @@ section {
     padding: 1rem;
     margin: 1rem auto;
     max-width: 1024px; /* Maximum width for the section */
+    display: flex;
+    flex-direction: column;
 }
 
 section a {
@@ -79,6 +81,13 @@ section a {
     background-color: #fff;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.cv-pdf embed {
+            width: 100%;
+            max-width: 800px;
+            height: 80vh;
+            border: 1px solid #ccc;
 }
 
 h1 {
