@@ -3,69 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enrico Foglia</title>
+    <meta name="description" content="Enrico Foglia - PhD candidate at ISAE-Supaéro and Université de Sherbrooke">
+    <title>Enrico Foglia - Personal Website</title>
     <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="css/styles.css">
-
-    <!-- Add fontawesome to add icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Header section with the main title -->
-    <div class="banner">
+    <header class="banner" role="banner">
         <h1>Enrico Foglia</h1>
-    </div>
-    
-    <!-- Navigation bar with links to different sections of the page -->
-    <nav>
-        <ul>
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#publications">Publications</a></li>
-            <li><a href="#contact">Contact</a></li>
-            <li><a href="#cv">Curriculum Vitae</a></li>
+    </header>
+
+    <nav class="nav" role="navigation">
+        <ul class="nav__list">
+            <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
+            <li class="nav__item"><a href="#publications" class="nav__link">Publications</a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+            <li class="nav__item"><a href="#cv" class="nav__link">Curriculum Vitae</a></li>
         </ul>
     </nav>
-    
-    <!-- Section about me -->
-    <section id="about">
-        <div class="about-header">
-            <h2>About Me</h2>
-            <!-- Adding a photo -->
-            <img src="images/foto_carina.jpg" alt="Photo of Me" class="profile-photo">
-        </div>
-        <p>Ciao, thank you for passing by! I'm Enrico, and I am currently a PhD candidate at ISAE-Supaéro (France) and Université de Sherbrooke (Canada), under the supervision of <a href="https://pagespro.isae-supaero.fr/michael-bauerheim/?lang=en">Michael Bauerheim</a>, <a href="https://www.researchgate.net/profile/Thierry-Jardin">Thierry Jardin</a> and <a href="https://www.usherbrooke.ca/recherche/fr/specialistes/details/stephane.moreau">Stéphane Moreau</a>.</p>
-        <p>We live in a sonic world that is getting more and more polluted: this is not only a matter of annoyance, but a public health and social justice issue! However, taking noise generation into account during numerical optimization cycles can be challenging due to the prohibitive cost of high fidelity simulations. In our group we want to tackle this issue by leveraging modern advances in statistical modeling, notably Neural Networks, and combining it with Bayesian Optimization to keep the required number for simulations as low as possible.</p>
-        <p>Previously I spent five months within the aeroacoustics group at ONERA (Paris), and helped develop a discrete adjoint solver for rotor noise in the frequency domain. This work was done under the supervision of Majd Daroukh, Martin Buszik and Itham Salah el-Din.</p>
-        <p>Feel free to contact me regarding papers I wrote, papers you might want to write with me, papers you think might be interesting for me or even just if you have a cool South American novel to suggest. In fact, probably novels should be number one in the list.</p>
-    </section>
-    
-    <!-- Section showcasing projects -->
-    <section id="publications",class="hidden">
-        <h2>Publications</h2>
-        <p>Check out our papers!</p>
-    </section>
-    
-    <!-- Contact section -->
-    <section id="contact",class="hidden">
-        <h2>Contact</h2>
-         <div class="contact-container">
-        <div class="contact-info">
-            <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:enrico.foglia@isae-supaero.fr">enrico.foglia@isae-supaero.fr</a></p>
-            <p><i class="fab fa-linkedin"></i> <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/enrico-foglia-334236206" target="_blank">Enrico Foglia</a></p>
-            <p><i class="fab fa-github"></i> <strong>GitHub:</strong> <a href="https://github.com/enricofoglia" target="_blank">enricofoglia</a></p>
-        </div>
-    </div>
-    </section>
 
-    <!-- Curriculum section -->
-    <section id="cv",class="hidden">
-        <h2>Curriculum Vitae</h2>
-            <div class="cv-pdf">
-        <embed src="https://enricofoglia.github.io/files/cv_US.pdf" type="application/pdf" />
-    </div>
-    </section>
+    <main role="main">
+        <section id="about" class="section profile" data-section>
+            <div class="profile__content">
+                <h2>About Me</h2>
+                <p>Ciao, thank you for passing by! I'm Enrico, and I am currently a PhD candidate at ISAE-Supaéro (France) and Université de Sherbrooke (Canada), under the supervision of <a href="https://pagespro.isae-supaero.fr/michael-bauerheim/?lang=en" class="contact__link">Michael Bauerheim</a>, <a href="https://www.researchgate.net/profile/Thierry-Jardin" class="contact__link">Thierry Jardin</a> and <a href="https://www.usherbrooke.ca/recherche/fr/specialistes/details/stephane.moreau" class="contact__link">Stéphane Moreau</a>.</p>
+                <p>We live in a sonic world that is getting more and more polluted: this is not only a matter of annoyance, but a public health and social justice issue! However, taking noise generation into account during numerical optimization cycles can be challenging due to the prohibitive cost of high fidelity simulations. In our group we want to tackle this issue by leveraging modern advances in statistical modeling, notably Neural Networks, and combining it with Bayesian Optimization to keep the required number for simulations as low as possible.</p>
+            </div>
+            <img src="images/foto_carina.jpg" alt="Photo of Enrico Foglia" class="profile__photo">
+        </section>
 
-        
+        <section id="publications" class="section section--hidden" data-section>
+            <h2>Publications</h2>
+            <p>Check out our papers!</p>
+        </section>
+
+        <section id="contact" class="section section--hidden" data-section>
+            <h2>Contact</h2>
+            <div class="contact">
+                <p><strong>Email:</strong> <a href="mailto:enrico.foglia@isae-supaero.fr" class="contact__link">enrico.foglia@isae-supaero.fr</a></p>
+                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/enrico-foglia-334236206" class="contact__link" target="_blank" rel="noopener noreferrer">Enrico Foglia</a></p>
+                <p><strong>GitHub:</strong> <a href="https://github.com/enricofoglia" class="contact__link" target="_blank" rel="noopener noreferrer">enricofoglia</a></p>
+            </div>
+        </section>
+
+        <section id="cv" class="section section--hidden" data-section>
+            <h2>Curriculum Vitae</h2>
+            <div class="cv-container">
+                <p>Loading CV...</p>
+            </div>
+        </section>
+    </main>
+
     <!-- Link to the external JavaScript file -->
     <script src="js/scripts.js"></script>
 </body>
