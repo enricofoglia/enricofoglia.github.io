@@ -14,24 +14,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    function loadCV() {
-        const cvContainer = document.querySelector('.cv-container');
-        const iframe = document.createElement('iframe');
-        iframe.src = '/files/cv_US.pdf';
-        iframe.style.width = '100%';
-        iframe.style.height = '800px';
-        iframe.style.border = '1px solid #ccc';
-        cvContainer.innerHTML = '';
-        cvContainer.appendChild(iframe);
-    }
-
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             e.preventDefault();
             const targetId = link.getAttribute('href').substring(1);
             
+            // Special handling for CV link
             if (targetId === 'cv') {
-                loadCV();
+                window.open('./files/cv_US.pdf', '_blank', 'noopener,noreferrer');
+                return;
             }
             
             showSection(targetId);
@@ -42,9 +33,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Handle initial load and browser navigation
     const handleNavigation = () => {
         const hash = location.hash.substring(1) || 'about';
-        showSection(hash);
         if (hash === 'cv') {
-            loadCV();
+            window.open('./files/cv_US.pdf', '_blank', 'noopener,noreferrer');
+            history.pushState(null, '', '#about');
+            showSection('about');
+        } else {
+            showSection(hash);
         }
     };
 

@@ -21,6 +21,15 @@
             <li class="nav__item"><a href="#cv" class="nav__link">Curriculum Vitae</a></li>
         </ul>
     </nav>
+    <!-- Navigation -->
+    <!-- <nav>
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#publications">Publications</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#cv">Curriculum Vitae</a></li>
+        </ul>
+    </nav> -->
 
     <main role="main">
         <section id="about" class="section profile" data-section>
@@ -34,7 +43,38 @@
 
         <section id="publications" class="section section--hidden" data-section>
             <h2>Publications</h2>
-            <p>Check out our papers!</p>
+            <div class="publications-grid">
+                <!-- Example publication card -->
+                <article class="publication-card">
+                    <img src="./images/adjoint_scheme.png" alt="Publication visualization" class="publication-image">
+                    <div class="publication-content">
+                        <h3 class="publication-title">Towards the optimization of propeller tonal noise in the frequency domain using the discrete adjoint method</h3>
+                        <p class="publication-authors">
+                            <strong>E. Foglia</strong>, M. Daroukh, M. Buszyk, I. Salah el-Din, and S. Moreau 
+                        </p>
+                        <p class="publication-abstract">
+                            Numerical optimization is, today, a challenging task in aeroacoustics because of the high number of simulations that it requires. The discrete adjoint drastically reduces this burden, at the cost of simulating an indirect solution that requires the knowledge of the gradients of the solver and of the objective function. We present a methodology that allows for the use of a wide range of acoustic functions, such as the source power level or the radiated sound pressure level at multiple observers, based on Hanson’s frequency domain formula for (steady) loading and thickness noise. The calculation of the forward and adjoint solutions is carried out using the industrial code elsA, coupled with a python implementation of the Hanson’s formula. The gradients of the discrete objective functions with respect to the grid coordinates and the flow variables have have been computed analytically, allowing for a very eﬀicient implementation directly in python. The overall the methodology has been thoroughly validated using existing tools and finite difference approximations of the gradients.
+                        </p>
+                        <div class="publication-links">
+                            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FAy-5b8AAAAJ&citation_for_view=FAy-5b8AAAAJ:u5HHmVD_uO8C" class="publication-link" target="_blank" rel="noopener noreferrer">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M12 14l9-5-9-5-9 5 9 5z"></path>
+                                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"></path>
+                                </svg>
+                                Google Scholar
+                            </a>
+                            <!-- <a href="https://github.com/username/repo" class="publication-link" target="_blank" rel="noopener noreferrer">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                                GitHub
+                            </a> -->
+                        </div>
+                    </div>
+                </article>
+        
+                <!-- Add more publication cards as needed -->
+            </div>
         </section>
 
         <section id="contact" class="section section--hidden" data-section>
@@ -46,12 +86,12 @@
             </div>
         </section>
 
-        <section id="cv" class="section section--hidden" data-section>
+        <!-- <section id="cv" class="section section--hidden" data-section>
             <h2>Curriculum Vitae</h2>
             <div class="cv-container">
                 <p>Loading CV...</p>
             </div>
-        </section>
+        </section> -->
     </main>
 
     <!-- Link to the external JavaScript file -->
