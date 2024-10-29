@@ -1,18 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('[data-section]');
     const navLinks = document.querySelectorAll('.nav__link');
-
-    function showSection(sectionId) {
-        sections.forEach(section => {
-            if (section.id === sectionId) {
-                section.classList.remove('section--hidden');
-                setTimeout(() => section.style.opacity = 1, 10);
-            } else {
-                section.style.opacity = 0;
-                setTimeout(() => section.classList.add('section--hidden'), 300);
-            }
-        });
-    }
 
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
@@ -25,20 +12,45 @@ document.addEventListener('DOMContentLoaded', () => {
                 return;
             }
             
-            showSection(targetId);
-            history.pushState(null, '', `#${targetId}`);
+            // Smooth scroll to target section
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                // Get the height of the fixed navigation bar
+                const navHeight = document.querySelector('.nav').offsetHeight;
+                
+                // Calculate the final scroll position, accounting for the nav bar
+                const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                
+                window.scrollTo({
+                    top: targetPosition,
+                    behavior: 'smooth'
+                });
+                
+                // Update URL without scrolling
+                history.pushState(null, '', `#${targetId}`);
+            }
         });
     });
 
     // Handle initial load and browser navigation
     const handleNavigation = () => {
-        const hash = location.hash.substring(1) || 'about';
+        const hash = location.hash.substring(1);
         if (hash === 'cv') {
             window.open('./files/cv_US.pdf', '_blank', 'noopener,noreferrer');
             history.pushState(null, '', '#about');
-            showSection('about');
-        } else {
-            showSection(hash);
+        } else if (hash) {
+            // Smooth scroll to the section after page load
+            setTimeout(() => {
+                const targetSection = document.getElementById(hash);
+                if (targetSection) {
+                    const navHeight = document.querySelector('.nav').offsetHeight;
+                    const targetPosition = targetSection.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }, 100);
         }
     };
 
