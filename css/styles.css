@@ -127,13 +127,13 @@ main {
     box-shadow: 0 0 10px var(--shadow-color);
 }
 
-.contact__link {
+.contact__link, .quote__link {
     color: var(--primary-color);
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
-.contact__link:hover {
+.contact__link:hover, .quote__link:hover {
     text-decoration: underline;
 }
 
@@ -197,19 +197,32 @@ main {
 .publication-link {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    border-radius: calc(var(--border-radius) / 2);
-    background-color: #f5f5f5;
-    color: var(--primary-color);
+    color: var(--text-color);
     text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .publication-link:hover {
     background-color: #e5e5e5;
-    transform: translateY(-1px);
+    pointer: ;
 }
+
+/* Quotation block */
+.quote, .quote-author {
+    text-align: right;
+}
+
+.quote {
+    font-size: 1.1em;
+}
+
+.quote-container{
+    background-color: var(--background-color);
+    border-radius: var(--border-radius);
+    box-shadow: 0 0 10px var(--shadow-color);
+    padding: var(--section-padding);
+}
+
 
 /* Responsive design */
 @media (max-width: 768px) {
@@ -244,6 +257,7 @@ main {
     .publication-links {
         justify-content: center;
     }
+
 }
 
 @media (max-width: 480px) {
