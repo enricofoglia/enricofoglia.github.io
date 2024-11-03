@@ -11,6 +11,7 @@
     --section-padding: 2rem;
     --card-spacing: 1.5rem;
     --border-radius: 8px;
+    --pub-hover: #ddd;
 }
 
 /* Reset and base styles */
@@ -200,11 +201,13 @@ main {
     color: var(--text-color);
     text-decoration: none;
     transition: all 0.3s ease;
+    padding: 10px;
+    border-radius: var(--border-radius);
 }
 
 .publication-link:hover {
-    background-color: #e5e5e5;
-    pointer: ;
+    background-color: var(--pub-hover);
+    cursor: pointer;
 }
 
 /* Quotation block */
