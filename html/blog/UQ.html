@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UQ - Enrico Foglia</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+
+    <!-- MathJax Configuration -->
+    <script type="text/javascript">
+        MathJax = {
+            tex: {
+                // Configure MathJax to use dollar signs for inline and display math
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']],
+                processEscapes: true
+            }
+        };
+    </script>
+    
+    <!-- Load MathJax -->
+    <script type="text/javascript" id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+    </script>
+
+</head>
+<body>
+    <nav class="nav" role="navigation">
+        <ul class="nav__list">
+            <li class="nav__item"><a href="../../index.html#about" class="nav__link">About Me</a></li>
+            <li class="nav__item"><a href="../../index.html#publications" class="nav__link">Publications</a></li>
+            <li class="nav__item"><a href="../../index.html#blog" class="nav__link">Blog</a></li>
+            <li class="nav__item"><a href="../../index.html#contact" class="nav__link">Contact</a></li>
+            <li class="nav__item"><a href="../../index.html#cv" class="nav__link">Curriculum Vitae</a></li>
+        </ul>
+    </nav>
+
+    <main role="main">
+        <section class="section">
+            <div class="blog-post-full">
+                <h1>Uncertainty quantification: teach neural nets to doubt themselves</h1>
+                <p class="blog-post-meta">Published on November 25, 2024 | 5 min read</p>
+                
+                <article class="blog-post-content">
+                    <p>In my research, I deal with a peculiar mix of aeroacoustics, which is the science of predicting sound produced by unsteady aerodynamics, and deep learning. Crucially, aeroacoustics is extremely delicate, and either needs very high-fidelity simulations or precise experiments to be investigated. This means, that any dataset about aeroacoustics is, by default, going to be quite limited in terms of datapoints. The question is: <strong>How can one plan new experiments (numerical or physical) by taking into account what the model does not know yet?</strong> </p>
+
+                    <p>The general field that studies questions like this is called Uncertainty Quantification (UQ). </p>
+                    
+                </article>
+
+                <div class="blog-post-footer">
+                    <a href="../../index.html#blog" class="blog-back-link">← Back to Blog</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
