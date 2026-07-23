@@ -3,59 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Enrico Foglia - Personal Website</title>
+    <title>Enrico Foglia</title>
+    <meta name="description" content="Enrico Foglia — PhD candidate in aeroacoustics and machine learning at ISAE-Supaéro and Université de Sherbrooke.">
+    <meta name="author" content="Enrico Foglia">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Enrico Foglia">
+    <meta property="og:description" content="PhD candidate in aeroacoustics and machine learning.">
+    <meta property="og:image" content="images/foto_carina.jpg">
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>ƒ</text></svg>">
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="banner" role="banner">
-        <h1>Enrico Foglia</h1>
-    </div>
+    <header class="site-header">
+        <div class="site-header__inner">
+            <a href="#top" class="brand">Enrico Foglia</a>
+            <nav class="nav" aria-label="Primary">
+                <a href="#about" class="nav__link">About</a>
+                <a href="#publications" class="nav__link">Publications</a>
+                <a href="#blog" class="nav__link">Blog</a>
+                <a href="#contact" class="nav__link">Contact</a>
+                <a href="files/cv_US.pdf" class="nav__link">CV</a>
+            </nav>
+        </div>
+    </header>
 
-    <nav class="nav">
-        <ul class="nav__list">
-            <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
-            <li class="nav__item"><a href="#publications" class="nav__link">Publications</a></li>
-            <li class="nav__item"><a href="#blog" class="nav__link">Blog</a></li>
-            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-            <li class="nav__item"><a href="#cv" class="nav__link">Curriculum Vitae</a></li>
-        </ul>
-    </nav>
-
-    <main role="main">
-        <section id="quote", class="section">
-            <div class="quote-container">
-                <p class="quote"><i>"I think we should honor Feynman by getting as much baloney out of our own sandwiches as we can."</i></p>
-                <p class="quote-author">-Leonard Susskind, <a href="https://www.youtube.com/watch?v=6Waurx8e-1o" class="quote__link" target="_blank">TED: "My friend Richard Feynman"</a></p>
-            </div>
+    <main id="top" class="wrap">
+        <section class="intro" aria-label="Introduction">
+            <h1 class="intro__name">Enrico Foglia</h1>
+            <p class="intro__tagline">
+                PhD candidate in aeroacoustics and machine learning, working to make
+                quieter machines through statistical modeling and Bayesian optimization.
+            </p>
         </section>
-        <section id="about" class="section profile">
-            <div class="profile__content">
-                <h2>About Me</h2>
-                <p>Ciao, thank you for passing by! I'm Enrico, and I am currently a PhD candidate at ISAE-Supaéro (France) and Université de Sherbrooke (Canada), under the supervision of <a href="https://pagespro.isae-supaero.fr/michael-bauerheim/?lang=en" class="contact__link">Michael Bauerheim</a>, <a href="https://www.researchgate.net/profile/Thierry-Jardin" class="contact__link">Thierry Jardin</a> and <a href="https://www.usherbrooke.ca/recherche/fr/specialistes/details/stephane.moreau" class="contact__link">Stéphane Moreau</a>.</p>
-                
-                <p>We live in a sonic world that is getting more and more polluted: this is not only a matter of annoyance, but a public health and social justice issue! However, taking noise generation into account during numerical optimization cycles can be challenging due to the prohibitive cost of high fidelity simulations. In our group we want to tackle this issue by leveraging modern advances in statistical modeling, notably Neural Networks, and combining it with Bayesian Optimization to keep the required number for simulations as low as possible.</p>
+
+        <section id="about" class="section">
+            <h2 class="section__label">About</h2>
+            <div class="about">
+                <div class="about__text prose">
+                    <p>Ciao, thank you for passing by! I'm Enrico, and I am currently a PhD candidate at ISAE-Supaéro (France) and Université de Sherbrooke (Canada), under the supervision of <a href="https://pagespro.isae-supaero.fr/michael-bauerheim/?lang=en">Michael Bauerheim</a>, <a href="https://www.researchgate.net/profile/Thierry-Jardin">Thierry Jardin</a> and <a href="https://www.usherbrooke.ca/recherche/fr/specialistes/details/stephane.moreau">Stéphane Moreau</a>.</p>
+
+                    <p>We live in a sonic world that is getting more and more polluted: this is not only a matter of annoyance, but a public health and social justice issue. However, taking noise generation into account during numerical optimization cycles can be challenging due to the prohibitive cost of high-fidelity simulations. In our group we want to tackle this issue by leveraging modern advances in statistical modeling, notably neural networks, and combining it with Bayesian optimization to keep the required number of simulations as low as possible.</p>
+                </div>
+                <img src="images/foto_carina.jpg" alt="Portrait of Enrico Foglia" class="about__photo" width="180" loading="lazy">
             </div>
-            <img src="images/foto_carina.jpg" alt="Photo of Enrico Foglia" class="profile__photo">
         </section>
 
         <section id="publications" class="section">
-            <h2>Publications</h2>
-            <div class="publications-grid">
-                <article class="publication-card">
-                    <img src="./images/adjoint_scheme.png" alt="Publication visualization" class="publication-image">
-                    <div class="publication-content">
-                        <h3 class="publication-title">Towards the optimization of propeller tonal noise in the frequency domain using the discrete adjoint method</h3>
-                        <p class="publication-authors"><strong>E. Foglia</strong>, M. Daroukh, M. Buszyk, I. Salah el-Din, and S. Moreau</p>
-                        <p class="publication-abstract">Numerically optimizing rotors targetting their noise emission is challenging because computing the gradient can be extremely expensive computationally. However, by leveraging the adjoint of the linearized Navier-Stokes equations, it is possible to compute the sensitivity of your objective function to an arbitrary number of parameters with only one "weird looking" computation! In this paper, we derived analytically the linearization of the acoustic pressure generated by a rotating blade, so that it can be used in any adjoint solver to allow it to take acoustics into account.</p>
-                        <div class="publication-links">
-                            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FAy-5b8AAAAJ&citation_for_view=FAy-5b8AAAAJ:u5HHmVD_uO8C" class="publication-link" target="_blank" rel="noopener noreferrer">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                    <path d="M12 14l9-5-9-5-9 5 9 5z" />
-                                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
-                                </svg>
-                                Google Scholar
-                            </a>
-                            <a href="files/presentation_AIAA_Rome_2024.pdf" class="publication-link">Presentation</a>
+            <h2 class="section__label">Publications</h2>
+            <div class="pub-list">
+                <article class="pub">
+                    <img src="images/adjoint_scheme.png" alt="Discrete adjoint scheme visualization" class="pub__thumb" loading="lazy">
+                    <div class="pub__body">
+                        <h3 class="pub__title">Towards the optimization of propeller tonal noise in the frequency domain using the discrete adjoint method</h3>
+                        <p class="pub__authors"><strong>E. Foglia</strong>, M. Daroukh, M. Buszyk, I. Salah el-Din, and S. Moreau</p>
+                        <p class="pub__abstract">Numerically optimizing rotors targeting their noise emission is challenging because computing the gradient can be extremely expensive. By leveraging the adjoint of the linearized Navier–Stokes equations, however, it is possible to compute the sensitivity of an objective function to an arbitrary number of parameters with a single computation. In this paper, we derive analytically the linearization of the acoustic pressure generated by a rotating blade, so that it can be used in any adjoint solver to take acoustics into account.</p>
+                        <div class="pub__links">
+                            <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=FAy-5b8AAAAJ&citation_for_view=FAy-5b8AAAAJ:u5HHmVD_uO8C" class="pub__link" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                            <a href="files/presentation_AIAA_Rome_2024.pdf" class="pub__link">Presentation (PDF)</a>
                         </div>
                     </div>
                 </article>
@@ -63,32 +70,45 @@
         </section>
 
         <section id="blog" class="section">
-            <h2>Blog</h2>
-            <div class="blog-grid">
-                <article class="blog-card">
-                    <div class="blog-card-inner">
-                        <h3 class="blog-card-title">Uncertainty Quantification in deep learning</h3>
-                        <img src="images/UQ_cover.jpeg" alt="Research Journey" class="blog-card-image">
-                        <div class="blog-card-overlay">
-                            <p class="blog-card-abstract">The uncertainty of deep learning model is very uncertain. I think I might have understood something, so I wanna share it here (also, this way I'll probably not forget it as soon as I start working on something else).</p>
-                        </div>
-                        <a href="html/blog/UQ.html" class="blog-card-link"></a>
-                    </div>
-                </article>
+            <h2 class="section__label">Blog</h2>
+            <div class="post-list">
+                <a href="html/blog/UQ.html" class="post">
+                    <h3 class="post__title">Uncertainty quantification in deep learning</h3>
+                    <p class="post__abstract">The uncertainty of deep learning models is very uncertain. I think I might have understood something, so I want to share it here (this way I'll probably not forget it as soon as I start working on something else).</p>
+                </a>
                 <!-- More blog posts can be added here -->
             </div>
         </section>
 
         <section id="contact" class="section">
-            <h2>Contact</h2>
-            <div class="contact">
-                <p><strong>Email:</strong> <a href="mailto:enrico.foglia@isae-supaero.fr" class="contact__link">enrico.foglia@isae-supaero.fr</a></p>
-                <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/enrico-foglia-334236206" class="contact__link" target="_blank" rel="noopener noreferrer">Enrico Foglia</a></p>
-                <p><strong>GitHub:</strong> <a href="https://github.com/enricofoglia" class="contact__link" target="_blank" rel="noopener noreferrer">enricofoglia</a></p>
-            </div>
+            <h2 class="section__label">Contact</h2>
+            <dl class="contact-list">
+                <dt>Email</dt>
+                <dd><a href="mailto:enrico.foglia@isae-supaero.fr">enrico.foglia@isae-supaero.fr</a></dd>
+                <dt>LinkedIn</dt>
+                <dd><a href="https://www.linkedin.com/in/enrico-foglia-334236206" target="_blank" rel="noopener noreferrer">Enrico Foglia</a></dd>
+                <dt>GitHub</dt>
+                <dd><a href="https://github.com/enricofoglia" target="_blank" rel="noopener noreferrer">enricofoglia</a></dd>
+            </dl>
+        </section>
+
+        <section class="section" aria-label="Epigraph">
+            <figure class="epigraph">
+                <blockquote class="epigraph__text">
+                    "I think we should honor Feynman by getting as much baloney out of our own sandwiches as we can."
+                </blockquote>
+                <figcaption class="epigraph__source">
+                    — Leonard Susskind, <a href="https://www.youtube.com/watch?v=6Waurx8e-1o" target="_blank" rel="noopener noreferrer">TED: "My friend Richard Feynman"</a>
+                </figcaption>
+            </figure>
         </section>
     </main>
 
-    <script src="js/scripts.js"></script>
+    <footer class="site-footer">
+        <div class="site-footer__inner">
+            <span>© 2026 Enrico Foglia</span>
+            <a href="#top">Back to top ↑</a>
+        </div>
+    </footer>
 </body>
 </html>
