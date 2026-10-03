@@ -27,7 +27,6 @@
             <nav class="nav" aria-label="Primary">
                 <a href="#about" class="nav__link">About</a>
                 <a href="#publications" class="nav__link">Publications</a>
-                <a href="#blog" class="nav__link">Blog</a>
                 <a href="#contact" class="nav__link">Contact</a>
                 <a href="files/cv_US.pdf" class="nav__link">CV</a>
             </nav>
@@ -38,8 +37,7 @@
         <section class="intro" aria-label="Introduction">
             <h1 class="intro__name">Enrico Foglia</h1>
             <p class="intro__tagline">
-                PhD candidate in aeroacoustics and machine learning, working to make
-                quieter machines through statistical modeling and Bayesian optimization.
+                PhD candidate in aeroacoustics and machine learning.
             </p>
         </section>
 
@@ -47,17 +45,43 @@
             <h2 class="section__label">About</h2>
             <div class="about">
                 <div class="about__text prose">
-                    <p>Ciao, thank you for passing by! I'm Enrico, and I am currently a PhD candidate at ISAE-Supaéro (France) and Université de Sherbrooke (Canada), under the supervision of <a href="https://pagespro.isae-supaero.fr/michael-bauerheim/?lang=en">Michael Bauerheim</a>, <a href="https://www.researchgate.net/profile/Thierry-Jardin">Thierry Jardin</a> and <a href="https://www.usherbrooke.ca/recherche/fr/specialistes/details/stephane.moreau">Stéphane Moreau</a>.</p>
+                    <p>Ciao, thank you for passing by! I'm Enrico, and I am a PhD candidate at ISAE-Supaéro (France) and Université de Sherbrooke (Canada), under the supervision of <a href="https://pagespro.isae-supaero.fr/michael-bauerheim/?lang=en">Michael Bauerheim</a>, <a href="https://www.researchgate.net/profile/Thierry-Jardin">Thierry Jardin</a> and <a href="https://www.usherbrooke.ca/recherche/fr/specialistes/details/stephane.moreau">Stéphane Moreau</a>.</p>
 
-                    <p>We live in a sonic world that is getting more and more polluted: this is not only a matter of annoyance, but a public health and social justice issue. However, taking noise generation into account during numerical optimization cycles can be challenging due to the prohibitive cost of high-fidelity simulations. In our group we want to tackle this issue by leveraging modern advances in statistical modeling, notably neural networks, and combining it with Bayesian optimization to keep the required number of simulations as low as possible.</p>
+                    <p>I work on understanding an modelling pressure fields under turbulent boundary layers. I am developing an approach based on large deviations theory&mdash;the mathematics of rare events&mdash;to generate statistically homogeneous fields subject to some prior information about their bulk behavior. </p>
+
+                    <p> I am mainly focused on aeroacoustics and energy-based models, but I am more broadely interested in statistical mechanics, turbulence, large deviations theory, random processes. Do not hesitate to contact me about any of these topics!</p>
                 </div>
-                <img src="images/foto_carina.jpg" alt="Portrait of Enrico Foglia" class="about__photo" width="180" loading="lazy">
+                <img src="images/IMG_5188.png" alt="Portrait of Enrico Foglia" class="about__photo" width="180" loading="lazy">
             </div>
         </section>
 
         <section id="publications" class="section">
             <h2 class="section__label">Publications</h2>
             <div class="pub-list">
+                <article class="pub">
+                    <img src="images/pdf_pressure_fluctuations.png" alt="PDF of pressure fluctuations" class="pub__thumb" loading="lazy">
+                    <div class="pub__body">
+                        <h3 class="pub__title">Analysis of Airfoil Self-Noise Sources Using Wavelet-Based Denoising</h3>
+                        <p class="pub__authors"><strong>E. Foglia</strong>, J. Rendon, S. Moreau, M. Bauerheim, T. Jardin</p>
+                        <p class="pub__abstract">Predicting trailing-edge noise requires one to be able to measure the turbulent pressure fluctuations near the trailing edge. However, experimental measurements of this crucial quantity are polluted by the acoustics. In this paper, we propose that the Coherent Vortex Extraction algorithm, which has been successfully used in many similar scenarios, can be used to separate the hydrodynamic and the acoustic components of experimentally measured pressure signals.</p>
+                        <div class="pub__links">
+                            <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=it&user=FAy-5b8AAAAJ&citation_for_view=FAy-5b8AAAAJ:2osOgNQ5qMEC" class="pub__link" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                            <a href="files/AIAA-CEAS2026.pdf" class="pub__link">Presentation (PDF)</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="pub">
+                    <img src="images/cp_uncertainty.png" alt="Cp prediction uncertainty" class="pub__thumb" loading="lazy">
+                    <div class="pub__body">
+                        <h3 class="pub__title">Empirical uncertainty quantification in deep learning: Applications to fluid dynamics</h3>
+                        <p class="pub__authors"><strong>E. Foglia</strong>, B. Bobbia, M. Bauerheim, T. Jardin, S. Moreau, P. Fua</p>
+                        <p class="pub__abstract">With deep learning models entering more and more into fields of applications like science and engineering, practitioners often push back because of the lack of guarantees in the extrapolation regime, i.e. when the model is asked to make predictions outside the boundaries of its training dataset. In this paper, we review some of the leading techniques to predict the model's internal uncertainty, often called <i>epistemic</i>, and we apply them to two datasets of interest for the fluid dynamics community.</p>
+                        <div class="pub__links">
+                            <a href="https://scholar.google.ca/citations?view_op=view_citation&hl=it&user=FAy-5b8AAAAJ&citation_for_view=FAy-5b8AAAAJ:9yKSN-GCB0IC" class="pub__link" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+                            <a href="https://www.sciencedirect.com/science/article/abs/pii/S0045793026001593" class="pub__link" target="_blank" rel="noopener noreferrer">Publisher</a>
+                        </div>
+                    </div>
+                </article>
                 <article class="pub">
                     <img src="images/adjoint_scheme.png" alt="Discrete adjoint scheme visualization" class="pub__thumb" loading="lazy">
                     <div class="pub__body">
@@ -73,16 +97,7 @@
             </div>
         </section>
 
-        <section id="blog" class="section">
-            <h2 class="section__label">Blog</h2>
-            <div class="post-list">
-                <a href="html/blog/UQ.html" class="post">
-                    <h3 class="post__title">Uncertainty quantification in deep learning</h3>
-                    <p class="post__abstract">The uncertainty of deep learning models is very uncertain. I think I might have understood something, so I want to share it here (this way I'll probably not forget it as soon as I start working on something else).</p>
-                </a>
-                <!-- More blog posts can be added here -->
-            </div>
-        </section>
+
 
         <section id="contact" class="section">
             <h2 class="section__label">Contact</h2>
